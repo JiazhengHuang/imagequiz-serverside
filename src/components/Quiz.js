@@ -5,9 +5,8 @@ import "./Quiz.css";
 import { Container, Row, Col, Image, Form, Button } from "react-bootstrap";
 
 function Quiz(props) {
-    // const [quiz, setQuiz] = useState([]);
     const [quiz, setQuiz] = useState([]);
-    var score = 0;
+    //var score = 0;
 
     useEffect(() => {
         let id = props.match.params.id;
@@ -15,9 +14,9 @@ function Quiz(props) {
         let selectQuiz = quizzes[id];
         console.log(selectQuiz);
         setQuiz(selectQuiz);
-    });
+    }, [props.match.params.id]);
 
-    const handleAnswerClick = () => {};
+    //const handleAnswerClick = () => {};
 
     return (
         <Container>
