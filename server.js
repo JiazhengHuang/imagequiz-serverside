@@ -24,7 +24,7 @@ app.get("/add/:a/:b", (request, response) => {
     response.send("${a} + ${b} = ${sum}");
 });
 
-app.port("/place", (request, response) => {
+app.post("/place", (request, response) => {
     let name = request.body.name;
     let address = response.body.address;
     let place = { name: name, address: address };
