@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="flowers"></div>
+    <script src="../data.js"></script>
+    <script>
+        let flowersDiv = document.getElementById("flowers");
+        flowers.forEach(flower => {
+            let figure = document.createElement("figure");
+            let image = new Image(200, 200);
+            image.setAttribute("id", flower.name);
+            image.setAttribute("src", flower.picture);
+            var caption = document.createElement("figcaption");
+            caption.innerHTML = flower.name;           
+            figure.appendChild(image);
+            figure.appendChild(caption);
+            flowersDiv.appendChild(figure);
+
+        });
+    </script>
+</body>
+
+</html>
