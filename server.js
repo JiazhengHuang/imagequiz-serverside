@@ -21,7 +21,7 @@ app.get("/add/:a/:b", (request, response) => {
     let a = request.params.a;
     let b = request.params.b;
     let sum = a + b;
-    response.send("${a} + ${b} = ${sum}");
+    response.send(`${a} + ${b} = ${sum}`);
 });
 
 app.post("/place", (request, response) => {
