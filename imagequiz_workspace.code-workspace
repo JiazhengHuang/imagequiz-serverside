@@ -1,0 +1,13 @@
+{
+    "folders": [
+			{
+				"name": "imagequiz",
+				"path": "../imagequiz"
+			},
+			{
+				"name": "imagequiz-serverside",
+				"path": "."
+			}
+		],
+    "settings": {}
+}
