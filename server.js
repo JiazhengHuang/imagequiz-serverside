@@ -1,3 +1,4 @@
+const cors = require("cors");
 const { request, response } = require("express");
 
 // dependencies
@@ -9,6 +10,7 @@ const port = process.env.PORT || 4002;
 
 // parse json
 app.use(express.json());
+app.use(cors());
 
 // app.get("/", (request, response) => {
 //     response.send("<h1>Hello!!!</h1>");
