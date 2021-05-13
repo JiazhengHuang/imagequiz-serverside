@@ -12,17 +12,6 @@ const port = process.env.PORT || 4002;
 app.use(express.json());
 app.use(cors());
 
-// app.get("/", (request, response) => {
-//     response.send("<h1>Hello!!!</h1>");
-// });
-
-// app.get("/add/:a/:b", (request, response) => {
-//     let a = request.params.a;
-//     let b = request.params.b;
-//     let sum = Number(a) + Number(b);
-//     response.send(`${a} + ${b} = ${sum}`);
-// });
-
 // app.post("/quizzes", (request, response) => {
 //     let name = request.body.name;
 //     let address = response.body.address;
