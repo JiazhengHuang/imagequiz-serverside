@@ -204,7 +204,9 @@ app.get("/quizzes", (request, response) => {
 });
 
 app.get("/quiz/:id", (request, response) => {
-    response.send("<h1>This is quiz/:id</h1>");
+    let quizzes = generateQuizzes();
+    let id = request.params.id;
+    response.json(quizzes[Number(id)]);
 });
 
 app.post("/score", (request, response) => {
