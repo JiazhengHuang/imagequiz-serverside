@@ -12,19 +12,6 @@ const port = process.env.PORT || 4002;
 app.use(express.json());
 app.use(cors());
 
-// app.post("/quizzes", (request, response) => {
-//     let name = request.body.name;
-//     let address = response.body.address;
-//     let place = { name: name, address: address };
-
-//     if (place) {
-//         response.json(place);
-//     } else {
-//         response.status(404).send("The place ${name} could not be found.");
-//     }
-//     // places.push(place);
-//     // response.send("the place ${name} was added successfully.");
-// });
 let flowers = [
     {
         name: "Acacia",
@@ -183,10 +170,7 @@ let generateQuizzes = () => {
 
 // data
 let quizzes = generateQuizzes();
-
-// app.post("/quizzes", (request, response) => {
-//     response.json(quizzes);
-// });
+let userScores = [];
 
 app.get("/quizzes", (request, response) => {
     response.json(flowers);
@@ -199,7 +183,11 @@ app.get("/quiz/:id", (request, response) => {
 });
 
 app.post("/score", (request, response) => {
-    response.send("<h1>This is score</h1>");
+    let num = request.body.num;
+    let id = request.body.id;
+    let score = { quizId: id, quizScore: num };
+    userScores.push(score);
+    response.send(`Congratulation!!! You Scored ${num} points.`);
 });
 
 // start the server
