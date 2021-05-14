@@ -1,5 +1,6 @@
 const cors = require("cors");
 const { request, response } = require("express");
+const db = require("./db");
 
 // dependencies
 const express = require("express");

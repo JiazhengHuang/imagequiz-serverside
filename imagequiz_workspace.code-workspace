@@ -7,7 +7,12 @@
 			{
 				"name": "imagequiz-serverside",
 				"path": "."
+			},
+			{
+				"path": "../Desktop/330"
 			}
 		],
-    "settings": {}
+		"settings": {
+			"liveServer.settings.multiRootWorkspaceName": "330"
+		}
 }
