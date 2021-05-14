@@ -13,7 +13,7 @@ let connection = {
     connectionString: process.env.DATABASE_URL
         ? process.env.DATABASE_URL
         : connectionString,
-    ssl: { rejectUnauthorized: flase },
+    ssl: { rejectUnauthorized: false },
 };
 
 const pool = new Pool(connection);
